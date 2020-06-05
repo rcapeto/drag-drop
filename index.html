@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Simple Kanban Board</title>
+   </head>
+   <body>
+      <header>
+         <h1>Simple Kanban Board</h1>
+         <button>+</button>
+      </header>
+      <div class="boards">
+         <div class="board">
+            <h3>Todo</h3>
+            <div class="dropzone">
+               <div class="card">
+                  <div class="status green"></div>
+                  <div class="content"> Estudar JavaScript</div>
+               </div>
+            </div>
+         </div>
+         <div class="board">
+            <h3>In progress</h3>
+            <div class="dropzone">
+               <div class="card">
+                  <div class="status blue"></div>
+                  <div class="content"> Estudar React-Native</div>
+               </div>
+            </div>
+         </div>
+         <div class="board">
+            <h3>Done</h3>
+            <div class="dropzone">
+               <div class="card">
+                  <div class="status red"></div>
+                  <div class="content"> Estudar HTML/CSS</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="create-card">
+         <form method="POST">
+            <div id="close-create-card">X</div>
+            <label for="task">Task name:</label>
+            <input type="text" placeholder="Type a new task" name="task">
+            <label>Status Color:</label>
+            <div>
+               <p>Blue <input type="checkbox" value="blue" name="color"></p>
+               <p>Red <input type="checkbox" value="red" name="color"></p>
+               <p>Green <input type="checkbox" value="green" name="color"></p>
+            </div>
+            <input type="hidden" name="color">
+            <button type="submit">Create</button>
+         </form>
+      </div>
+      <script src="./script.js"></script>
+   </body>
+</html>
